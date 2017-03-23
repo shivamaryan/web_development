@@ -9,10 +9,6 @@ def index(request):
     context = {
         'all_albums': all_albums,
     }
-   # html=''                                            the following lines moved to the template file
-    #for album in all_albums:                           cheers
-     #   url='/music/'+str(album.id)+'/'
-      #  html +='<a href="'+ url +'">'+album.album_title+'</a> <br>'    cheers uptil here
     return HttpResponse(template.render(context, request))
 
 def detail(request, album_id):
