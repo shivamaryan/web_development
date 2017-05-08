@@ -1,14 +1,9 @@
 <!-- Loads path to your static files -->
 {% extends 'music/base.html' %}
 {% block body %}
-    {%if all_albums%}
-        <h1>Here are all my albums</h1>
         <ul>
-            {% for album in all_albums %}
+            {% for album in mera_list %}
             <li><a href="{% url 'music:detail' album.id %}">{{album.album_title}}</a></li>
             {% endfor %}
         </ul>
-    {%else%}
-    <h3>You don't have any albums</h3>
-    {% endif %}
 {% endblock %}
